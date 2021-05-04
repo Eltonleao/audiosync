@@ -1,0 +1,7 @@
+{
+  "name": "audiosync",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
