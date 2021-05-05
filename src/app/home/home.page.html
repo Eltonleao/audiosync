@@ -1,20 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      AudioSync
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-list-header>
+      Audio1
+    </ion-list-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="{{audio.photoURL}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{audio.name}}</h2>
+        <h2>{{audio.text}}</h2>
+        <h3>{{audio.playing}}</h3>
+        <audio controls id="audio" src="{{audio.path}}"></audio>
+      </ion-label>
+      <ion-button (click)="play()">
+        Play
+      </ion-button>
+      <ion-button color="warning" (click)="pause()">
+        pause
+      </ion-button>
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>

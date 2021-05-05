@@ -1,0 +1,6 @@
+{
+    "hosting": {
+      "site": "audiosync",
+      "public": "www"
+    }
+  }
